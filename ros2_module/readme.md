@@ -10,7 +10,7 @@
 - Source ros2 and the workspace and add to .bashrc if you like.
 #### First time preparation
 - `pip install dynamixel_sdk numpy`
-- `sudo chmod 777 /dev/serial/by-id/*`
+- Install a least-privilege udev rule for the hand's exact USB serial device; do not use world-writable permissions.
 - `chmod +x leaphand_node.py`
 - `chmod +x ros2_example.py`
 #### To Launch
