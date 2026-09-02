@@ -3,6 +3,7 @@ project(leap_hand)
 
 # Find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_python REQUIRED)
 find_package(rclpy REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
@@ -18,6 +19,11 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/LeapEffort.srv"
   "srv/LeapPosVelEff.srv"
   DEPENDENCIES std_msgs
+)
+
+ament_python_install_package(
+  leap_hand_utils
+  PACKAGE_DIR scripts/leap_hand_utils
 )
 
 ###################################
